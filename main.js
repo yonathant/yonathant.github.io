@@ -18,6 +18,7 @@ $(document).ready(function () {
   });
 
   $(".project-info").click(function () {
+    $('.card').removeClass("mobile-active");
     $(this).closest('.card').toggleClass("mobile-active");
   });
 
