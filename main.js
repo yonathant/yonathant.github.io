@@ -2,9 +2,21 @@ $(document).ready(function () {
   $(".first-chat-bulb").css("display", "block");
 
   $(".menu-icon").click(function () {
-    $(".menu-close").toggleClass("popIn");
+    $(".menu-close").addClass("popIn");
+    $("#socials").addClass("popInLeft");
+    $("#socials").css("display", "block");
     $(".menu-close").css("display", "block");
+    $(".site-menu-overlay").removeClass("hidden");
   });
+
+  $(".menu-close").add(".site-menu-overlay").click(function () {
+    $(".menu-close").removeClass("popIn");
+    $("#socials").removeClass("popInLeft");
+    $("#socials").css("display", "none");
+    $(".menu-close").css("display", "none");
+    $(".site-menu-overlay").addClass("hidden");
+  });
+
 
   $(".first-chat-btn").click(function (e) {
     e.preventDefault();

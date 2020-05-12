@@ -6,14 +6,14 @@
 body {
   font-family: "Muli", sans-serif;
   color: #1A1A1A;
-  background-color: white;
+  background-color: #FAF9F7;
   background-image: url("/images/lines.svg");
   background-size: contain;
   overflow-x: hidden;
 }
 
 .page-border {
-  border: 20px solid #FAF9F7;
+  border: 20px solid #EEEEEE;
   position: fixed;
   top: 0;
   left: 0;
@@ -59,9 +59,10 @@ h2 {
 
 .menu-icon {
   background-image: url("/images/menu.svg");
-  background-size: cover;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-color: #F7CE19;
+  background-position: 50%;
   padding: 15px;
   width: 25px;
   height: 25px;
@@ -76,8 +77,8 @@ h2 {
   background-image: url("/images/menu-close.svg");
   background-color: #F7CE19;
   padding: 15px;
-  -webkit-box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2);
   opacity: 1;
   z-index: 10;
   display: none;
@@ -93,7 +94,11 @@ h2 {
   z-index: 8;
   -webkit-transition: background 200ms ease-in-out;
   transition: background 200ms ease-in-out;
-  visibility: hidden;
+  overflow: hidden;
+}
+.site-menu-overlay.hidden {
+  background: transparent;
+  pointer-events: none;
 }
 
 #socials {
@@ -118,6 +123,7 @@ h2 {
 .main-section h1:before {
   left: -15px;
   width: 530px;
+  top: 100px;
 }
 .main-section .button-primary {
   margin-top: 150px;
@@ -470,6 +476,11 @@ footer p {
 
   body {
     background-size: 140vw;
+    background-color: white;
+  }
+
+  .page-border {
+    border: 20px solid #FAF9F7;
   }
 
   h1 {
@@ -477,16 +488,15 @@ footer p {
   }
 
   #socials {
-    top: -100px;
+    top: 40px;
     left: 50px;
     padding: 0 10px;
-    position: absolute;
     background: white;
-    -webkit-box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.05);
-    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
     height: 60px;
-    z-index: 9;
-    visibility: hidden;
+    z-index: 8;
+    display: none;
   }
   #socials li {
     margin: 0;
@@ -543,6 +553,9 @@ footer p {
   .about-section .about-left .comment {
     padding-bottom: 20px;
   }
+  .about-section .about-left img {
+    margin-left: -60px;
+  }
   .about-section .text-bulb {
     margin-top: 35px;
     padding: 2rem;
@@ -589,9 +602,11 @@ footer p {
   .contact-section form .text-bulb {
     left: 0;
     padding: 2rem;
+    margin-top: 5rem;
   }
 
   footer {
     padding-top: 35rem;
+    padding-bottom: 2rem;
   }
 }
