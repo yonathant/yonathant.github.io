@@ -17,10 +17,10 @@ $(document).ready(function () {
     $(".site-menu-overlay").addClass("hidden");
   });
 
-  $(".project-info").click(function () {
-    $('.card').removeClass("mobile-active");
-    $(this).closest('.card').toggleClass("mobile-active");
-  });
+  // $(".project-info").click(function () {
+  //   $('.card').removeClass("mobile-active");
+  //   $(this).closest('.card').toggleClass("mobile-active");
+  // });
 
   $(".first-chat-btn").click(function (e) {
     e.preventDefault();
