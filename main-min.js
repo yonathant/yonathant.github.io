@@ -1,0 +1,1 @@
+$(document).ready((function(){$(".first-chat-btn").click((function(){$(".text-bulb").slideUp("slow",(function(){}))}))}));
