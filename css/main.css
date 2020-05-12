@@ -69,7 +69,7 @@ h2 {
   position: fixed;
   top: 30px;
   left: 30px;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 3;
 }
 
@@ -281,24 +281,24 @@ input[type=button].button-primary:hover, input[type=button].button-primary:focus
   -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.1);
 }
-.card:hover {
+.card:hover, .card:active, .card:focus {
   cursor: pointer;
 }
-.card:hover .more-icon {
+.card:hover .more-icon, .card:active .more-icon, .card:focus .more-icon {
   transform: translateY(10px);
   opacity: 0;
 }
-.card:hover:before {
+.card:hover:before, .card:active:before, .card:focus:before {
   width: 100%;
   height: 100%;
   padding-bottom: 2.5rem;
   bottom: -2.5rem;
 }
-.card:hover .appear {
+.card:hover .appear, .card:active .appear, .card:focus .appear {
   transform: translateY(0);
   opacity: 1;
 }
-.card:hover .appear:before {
+.card:hover .appear:before, .card:active .appear:before, .card:focus .appear:before {
   content: "";
   position: absolute;
   top: -2.5rem;
@@ -469,7 +469,7 @@ footer p {
     width: 100%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .mobile {
     display: block;
   }
@@ -554,7 +554,8 @@ footer p {
     padding-bottom: 20px;
   }
   .about-section .about-left img {
-    margin-left: -60px;
+    margin-left: 0;
+    left: 40px;
   }
   .about-section .text-bulb {
     margin-top: 35px;
