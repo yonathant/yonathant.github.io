@@ -16,6 +16,33 @@ body
     size: contain
   overflow-x: hidden
 
+@keyframes preloader-animation
+  0%
+    border-left: 1000px solid #EEEEEE
+    border-right: 1000px solid #EEEEEE
+    visibility: visible
+  100%
+    border-left: 20px solid #EEEEEE
+    border-right: 20px solid #EEEEEE
+    visibility: hidden
+
+@keyframes content-load
+  0%, 70%
+    opacity: 0
+  100%
+    opacity: 1
+
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  pointer-events: none
+  z-index: 999
+  visibility: hidden
+  animation: preloader-animation 2s
+
 .page-border
   border: 20px solid #EEEEEE
   position: fixed
@@ -25,6 +52,9 @@ body
   bottom: 0
   pointer-events: none
   z-index: -1
+
+.container
+  animation: content-load 2.4s
 
 .comment
   font-family: 'Patrick Hand', cursive
